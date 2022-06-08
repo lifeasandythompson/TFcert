@@ -35,6 +35,7 @@ variable "inputname" {
     description = "Set the name of the VPC" # what you want to ask the end user when running terraform apply
 }
 
+<<<<<<< HEAD
 variable "mytuple" { # the difference between a tuple and a list is that a tuple supports multiple data types
     type = tuple([string, number, string])
     default = ["cat", 1, "dog"]
@@ -48,12 +49,25 @@ variable "myobject" { # the difference between an object and a map is that an ob
     }
 }
 
+=======
+>>>>>>> f4a48dc8553e15249b9b3e245dfdf9ae9e626fa4
 ## How to use the variables 
 resource "aws_vpc" "myvpc" {
   cidr_block = "10.0.0.0/16"
 
+<<<<<<< HEAD
 # set the name of the VPC using variables
   tags= {
       Name = var.vpcname # will set the name of the VPC based on the vpcname variable set above
   }
+=======
+# set the name of the VPC using lists
+  tags = {
+      Name = var.inputname # will set the name of the VPC based on the input variable defined above
+  }
+}
+
+output "vpcid" {
+  value = aws_vpc.myvpc.id # format is resourcegivenname.givenname.attribute
+>>>>>>> f4a48dc8553e15249b9b3e245dfdf9ae9e626fa4
 }

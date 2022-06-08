@@ -34,6 +34,7 @@ variable "inputname" {
     description = "Set the name of the VPC"   
 }
 
+<<<<<<< HEAD
 variable "mytuple" { # the difference between a tuple and a list is that a tuple supports multiple data types
     type = tuple([string, number, string])
     default = ["cat", 1, "dog"]
@@ -47,6 +48,8 @@ variable "myobject" { # the difference between an object and a map is that an ob
     }
 }
 
+=======
+>>>>>>> f4a48dc8553e15249b9b3e245dfdf9ae9e626fa4
 ## How to use the variables 
 resource "aws_vpc" "myvpc" {
   cidr_block = "10.0.0.0/16"
@@ -82,5 +85,9 @@ resource "aws_vpc" "myvpc" {
   tags = {
       Name = var.inputname ["Key1"] # will set the name of the VPC based on the map and key value defined in the variable set above
   }
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> f4a48dc8553e15249b9b3e245dfdf9ae9e626fa4

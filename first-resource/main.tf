@@ -4,6 +4,7 @@ provider "aws"  {
 
 resource "aws_vpc" "myvpc" {
   cidr_block = "10.0.0.0/16"
+<<<<<<< HEAD
 
   tags = {
     Name = var.inputname ["Key1"] # will set the name of the VPC based on the map and key value defined in the variable set above
@@ -25,4 +26,6 @@ variable "myobject" { # the difference between an object and a map is that an ob
         name = "Andy"
         port = [22, 25, 80]
     }
+=======
+>>>>>>> f4a48dc8553e15249b9b3e245dfdf9ae9e626fa4
 }
